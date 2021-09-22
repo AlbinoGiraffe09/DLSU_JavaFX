@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainBorderPane" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dlsu.module7.PokedexController">
+   <left>
+      <AnchorPane fx:id="MenuPane" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Pokedex!">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font></Text>
+            <Button layoutX="33.0" layoutY="69.0" mnemonicParsing="false" onAction="#viewOneButton" prefWidth="135.0" text="View a Pokemon" />
+            <Button layoutX="33.0" layoutY="104.0" mnemonicParsing="false" onAction="#viewAllButton" prefWidth="135.0" text="View ALL Pokemon" />
+            <Button layoutX="33.0" layoutY="198.0" mnemonicParsing="false" onAction="#searchButton" prefWidth="135.0" text="Search for a Pokemon" />
+            <Button layoutX="33.0" layoutY="231.0" mnemonicParsing="false" onAction="#removeButton" prefWidth="135.0" text="Remove a Pokemon" />
+            <Button layoutX="33.0" layoutY="293.0" mnemonicParsing="false" onAction="#exitButton" prefWidth="135.0" text="EXIT" />
+            <TextField fx:id="pokemonSearchField" layoutX="33.0" layoutY="154.0" prefWidth="135.0" promptText="Enter Pokemon Name to Search/Remove" />
+            <Text layoutX="58.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search / Remove" />
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane fx:id="CanvasPane" prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="pokemonImage" fitHeight="200.0" fitWidth="200.0" layoutX="25.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="pokemonNameField" layoutX="55.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER" wrappingWidth="145.0">
+               <font>
+                  <Font name="Candara Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="pokemonTypeField" layoutX="52.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="150.0" />
+            <Text fx:id="pokemonHeightField" layoutX="52.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" textAlignment="CENTER" wrappingWidth="150.0" />
+            <Text fx:id="pokemonWeightField" layoutX="52.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" textAlignment="CENTER" wrappingWidth="150.0" />
+            <Rectangle fx:id="attackBar" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="22.0" layoutX="52.0" layoutY="280.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+            <Rectangle fx:id="defenseBar" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="22.0" layoutX="52.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+            <Rectangle fx:id="staminaBar" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="22.0" layoutX="52.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+            <Rectangle fx:id="attackBarFill" arcHeight="5.0" arcWidth="5.0" fill="#000000bf" height="22.0" layoutX="52.0" layoutY="280.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle fx:id="defenseBarFill" arcHeight="5.0" arcWidth="5.0" fill="#000000bf" height="22.0" layoutX="52.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle fx:id="staminaBarFill" arcHeight="5.0" arcWidth="5.0" fill="#000000bf" height="22.0" layoutX="52.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Text layoutX="111.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attack" textAlignment="CENTER" />
+            <Text layoutX="106.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Defense" />
+            <Text layoutX="106.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>
